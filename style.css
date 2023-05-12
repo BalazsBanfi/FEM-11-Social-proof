@@ -8,7 +8,7 @@
 }
 
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,13 +23,12 @@ body {
   display: grid;
   place-items: center;
   text-align: left;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "League Spartan", sans-serif;
 }
 
 main {
-  /* width: clamp(375px, 54vw, 670px); */
-  width: clamp(375px, 60vw, 1200px);
+  width: clamp(375px, 100vw, 1440px);
   height: 100vh;
   background: var(--white);
   padding: 0 1rem;
@@ -56,7 +55,9 @@ main {
 
 .title > p {
   color: #999;
+  font-size: 18px;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 /********************
@@ -66,7 +67,7 @@ main {
 .ratings {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .rating {
@@ -92,13 +93,13 @@ main {
 *****************/
 
 .user {
-  padding: 1.5rem;
+  padding: 2rem 1.5rem 1.5rem 2rem;
   background: var(--vdMagenta);
   color: var(--white);
   border-radius: 10px;
   display: grid;
   grid-template: min-content 1fr / 1fr 5fr;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
   align-items: center;
 }
 
@@ -110,6 +111,10 @@ main {
 
 .user > p {
   grid-column: 1 / 3;
+}
+
+.user p {
+  line-height: 1.5;
 }
 
 .user > div > p:nth-child(1) {
@@ -132,7 +137,8 @@ main {
 
 @media screen and (min-width: 900px) {
   main {
-    padding: 0 5rem;
+    padding: 0 10rem;
+    row-gap: 6rem;
   }
 
   .upper {
@@ -147,14 +153,25 @@ main {
 
   .title {
     min-height: 100%;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    row-gap: 2rem;
+  }
+
+  .title > * {
+    width: 75%;
+  }
+
+  .title > h1 {
+    font-size: 3.5rem;
   }
 
   .rating {
     display: flex;
-    width: 80%;
+    width: 85%;
+    padding: 1.25rem 1.25rem 1.25rem 2rem;
   }
 
   .rating > p {
@@ -163,6 +180,7 @@ main {
 
   .rating:nth-child(1) {
     align-self: flex-start;
+    margin-top: 3rem;
   }
 
   .rating:nth-child(2) {
@@ -174,12 +192,12 @@ main {
   }
 
   .bottom {
-    height: 300px;
+    height: 270px;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
   }
   .user {
-    height: 90%;
+    height: 85%;
   }
 
   .user:nth-child(1) {
