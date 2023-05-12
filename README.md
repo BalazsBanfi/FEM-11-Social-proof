@@ -19,7 +19,7 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 
 ### Screenshot
 
-![Mobile screenshot](./images/mobile.jpg)
+![Mobile screenshot](./images/mobile.png)
 ![Desktop screenshot](./images/desktop.jpg)
 
 
