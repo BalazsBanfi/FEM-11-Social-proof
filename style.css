@@ -8,6 +8,7 @@
 }
 
 * {
+  border: 1px solid red;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,38 +31,61 @@ main {
   width: clamp(375px, 54vw, 670px);
   height: 100vh;
   background: var(--white);
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-h1,
-h2 {
-  padding: 0.5rem 0 1rem;
+/******************
+***Title section***
+*******************/
+
+.upper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-/***************************
-***Grid container section***
-***************************/
+.title > h1 {
+  color: var(--vdMagenta);
+  font-weight: 700;
+}
 
-/*****************
-***Join section***
-*****************/
+.title > p {
+  color: #aaa;
+  font-weight: 500;
+}
+
+/********************
+***Ratings section***
+********************/
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rating {
+  padding: 0.5rem;
+  background: var(--lGrayishMagenta);
+  border-radius: 5px;
+  color: var(--vdMagenta);
+  font-weight: 700;
+}
 
 /********************
 ***Monthly section***
 ********************/
 
-
 /****************
 ***Why section***
 ****************/
-
 
 /************************
 ***Media query section***
 ************************/
 
 @media screen and (min-width: 750px) {
-
 }
