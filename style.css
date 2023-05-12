@@ -28,7 +28,8 @@ body {
 }
 
 main {
-  width: clamp(375px, 54vw, 670px);
+  /* width: clamp(375px, 54vw, 670px); */
+  width: clamp(375px, 60vw, 1200px);
   height: 100vh;
   background: var(--white);
   padding: 0 1rem;
@@ -129,7 +130,11 @@ main {
 ***Media query section***
 ************************/
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
+  main {
+    padding: 0 5rem;
+  }
+
   .upper {
     text-align: left;
     flex-direction: row;
@@ -140,4 +145,52 @@ main {
     flex: 1;
   }
 
+  .title {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .rating {
+    display: flex;
+    width: 80%;
+  }
+
+  .rating > p {
+    padding-left: 1rem;
+  }
+
+  .rating:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .rating:nth-child(2) {
+    align-self: center;
+  }
+
+  .rating:nth-child(3) {
+    align-self: flex-end;
+  }
+
+  .bottom {
+    height: 300px;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .user {
+    height: 90%;
+  }
+
+  .user:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .user:nth-child(2) {
+    align-self: center;
+  }
+
+  .user:nth-child(3) {
+    align-self: flex-end;
+  }
 }
