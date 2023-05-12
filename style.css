@@ -31,7 +31,7 @@ main {
   width: clamp(375px, 54vw, 670px);
   height: 100vh;
   background: var(--white);
-  padding: 4rem 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +53,7 @@ main {
 }
 
 .title > p {
-  color: #aaa;
+  color: #999;
   font-weight: 500;
 }
 
@@ -75,13 +75,40 @@ main {
   font-weight: 700;
 }
 
-/********************
-***Monthly section***
-********************/
+/*******************
+***Bottom section***
+*******************/
 
-/****************
-***Why section***
-****************/
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+
+/*****************
+***User section***
+*****************/
+
+.user {
+  background: var(--vdMagenta);
+  color: var(--white);
+  border-radius: 10px;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 5fr;
+  align-items: center;
+}
+
+.user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.user > p {
+  grid-column: 1 / 3;
+}
 
 /************************
 ***Media query section***
