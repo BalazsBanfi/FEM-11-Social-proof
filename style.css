@@ -130,4 +130,14 @@ main {
 ************************/
 
 @media screen and (min-width: 750px) {
+  .upper {
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .upper > * {
+    flex: 1;
+  }
+
 }
