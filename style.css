@@ -1,16 +1,15 @@
 :root {
---vdMagenta: hsl(300, 43%, 22%);
---softPink: hsl(333, 80%, 67%);
+  --vdMagenta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
 
---dGrayishMagenta: hsl(303, 10%, 53%);
---lGrayishMagenta: hsl(300, 24%, 96%);
---white: hsl(0, 0%, 100%);
+  --dGrayishMagenta: hsl(303, 10%, 53%);
+  --lGrayishMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
 }
 
 * {
   margin: 0;
   padding: 0;
-  list-style-type: none;
   box-sizing: border-box;
 }
 
@@ -19,18 +18,21 @@
 ******************/
 
 body {
-  background-color: var(--lightGray);
+  background-color: #ddd;
   display: grid;
   place-items: center;
   text-align: left;
-  font-family: "Karla", sans-serif;
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
 }
 
 main {
   width: clamp(375px, 54vw, 670px);
   height: 100vh;
-  display: grid;
-  place-items: center;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1,
@@ -42,143 +44,24 @@ h2 {
 ***Grid container section***
 ***************************/
 
-.container {
-  margin: 1rem;
-  border-radius: 10px;
-  overflow: hidden;
-  display: grid;
-  grid: 4fr 3fr 3fr / 1fr;
-  box-shadow: 3px 10px 15px 5px hsl(257, 40%, 85%);
-}
-
-.container > * {
-  padding: 1rem;
-  display: grid;
-  align-content: space-around;
-}
-
-.container > * > * {
-  padding-bottom: 1rem;
-}
-
 /*****************
 ***Join section***
 *****************/
-
-.join {
-  background: white;
-}
-
-.join > h1 {
-  color: var(--cyan);
-  font-size: 1.5rem;
-}
-
-.join > p:nth-child(2) {
-  color: var(--brightYellow);
-  font-size: 1.125rem;
-}
-
-.join > p:nth-child(3) {
-  color: var(--grayishBlue);
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 2;
-  opacity: 0.6;
-}
 
 /********************
 ***Monthly section***
 ********************/
 
-.monthly {
-  background: var(--cyan);
-  color: white;
-}
-
-.monthly > h2 {
-  font-size: 1.25rem;
-}
-
-.monthly > p:nth-child(2) {
-  color: white;
-  font-size: 2rem;
-}
-
-.monthly > p > span {
-  color: var(--lightGray);
-  font-size: 1.125rem;
-  opacity: 0.7;
-  position: relative;
-  bottom: 4px;
-}
-
-.monthly > p:nth-child(3) {
-  color: var(--lightGray);
-  font-size: 1rem;
-  font-weight: 400;
-  opacity: 0.7;
-}
-
-button {
-  display: block;
-  color: white;
-  width: 90%;
-  padding: 1rem;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  background: var(--brightYellow);
-  font-size: 1rem;
-  font-weight: 700;
-  box-shadow: 1px 3px 40px 2px grey;
-  transition-duration: 0.2s;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: yellowgreen;
-}
 
 /****************
 ***Why section***
 ****************/
 
-.why {
-  background: var(--cyan);
-  opacity: 0.75;
-}
-
-.why > h2 {
-  color: white;
-  font-size: 1.25rem;
-}
-
-.why > ul {
-  color: var(--lightGray);
-  font-size: 0.875rem;
-  font-weight: 400;
-  opacity: 0.8;
-}
-
-.why li {
-  padding-top: 3px;
-}
 
 /************************
 ***Media query section***
 ************************/
 
 @media screen and (min-width: 750px) {
-  .container {
-    grid: 4fr 5fr / 1fr 1fr;
-  }
 
-  .join {
-    grid-column: 1 / 3;
-  }
-
-  .container > * {
-    padding: 1.5rem 2rem 2rem 2.5rem;
-  }
 }
